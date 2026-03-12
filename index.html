@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nazarii Shportun</title>
+  <meta name="description" content="Nazarii Shportun – QA Automation Engineer, Researcher, AWS Certified. Expert in AI-driven test systems, LLMs, vector search, and cloud infrastructure.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" crossorigin="anonymous" />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #555555;
+      --accent: #0070f3;
+      --border: #e0e0e0;
+      --max-width: 680px;
+      --badge-bg: #f0f7ff;
+      --badge-text: #0055cc;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      padding: 60px 24px 120px;
+    }
+
+    .container { max-width: var(--max-width); margin: 0 auto; }
+
+    .header { display: flex; align-items: center; gap: 28px; margin-bottom: 36px; }
+
+    .header img {
+      width: 96px; height: 96px; border-radius: 50%;
+      object-fit: cover; border: 2px solid var(--border); flex-shrink: 0;
+    }
+
+    .header-text h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.5px; }
+    .header-text .tagline { color: var(--muted); font-size: 0.97rem; margin-top: 4px; }
+
+    .links {
+      display: flex; flex-wrap: wrap; align-items: center;
+      gap: 6px; margin-top: 12px;
+    }
+
+    .links a {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.875rem; color: var(--muted); text-decoration: none;
+      padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border);
+      transition: color 0.15s, border-color 0.15s, background 0.15s; white-space: nowrap;
+    }
+    .links a:hover { color: var(--accent); border-color: var(--accent); background: var(--badge-bg); }
+    .links a i { font-size: 1rem; width: 16px; text-align: center; }
+
+    .bio { margin-bottom: 48px; font-size: 0.97rem; }
+    .bio p + p { margin-top: 12px; }
+
+    section { margin-bottom: 48px; }
+
+    section h2 {
+      font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1.2px; color: var(--muted); margin-bottom: 20px;
+      padding-bottom: 6px; border-bottom: 1px solid var(--border);
+    }
+
+    .item { display: flex; gap: 20px; margin-bottom: 20px; }
+
+    .item-year {
+      font-size: 0.82rem; color: var(--muted);
+      min-width: 90px; padding-top: 3px; flex-shrink: 0;
+    }
+
+    .item-body strong { font-size: 0.97rem; display: block; }
+    .item-body .org { font-size: 0.88rem; color: var(--muted); }
+    .item-body .desc { font-size: 0.88rem; color: var(--muted); margin-top: 4px; }
+    .item-body a { color: var(--accent); text-decoration: none; }
+    .item-body a:hover { text-decoration: underline; }
+
+    .splits-toggle {
+      font-size: 0.8rem; color: var(--accent); cursor: pointer;
+      background: none; border: none; padding: 0; margin-top: 6px;
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+    .splits-toggle:hover { text-decoration: underline; }
+
+    .splits-table { display: none; margin-top: 10px; font-size: 0.8rem; border-collapse: collapse; width: 100%; }
+    .splits-table th, .splits-table td {
+      text-align: left; padding: 4px 10px 4px 0;
+      border-bottom: 1px solid var(--border); color: var(--muted);
+    }
+    .splits-table th { font-weight: 600; color: var(--text); }
+    .splits-table.open { display: table; }
+
+    .badge-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--badge-bg); color: var(--badge-text);
+      font-size: 0.82rem; font-weight: 500; padding: 5px 10px;
+      border-radius: 4px; text-decoration: none; transition: opacity 0.15s;
+    }
+    .badge:hover { opacity: 0.8; }
+    .badge i { font-size: 0.9rem; }
+
+    .pub { margin-bottom: 20px; }
+    .pub a.pub-title {
+      color: var(--text); text-decoration: none; font-size: 0.95rem;
+      font-weight: 500; border-bottom: 1px solid var(--border); transition: border-color 0.15s;
+    }
+    .pub a.pub-title:hover { border-color: var(--text); }
+    .pub .pub-meta { font-size: 0.83rem; color: var(--muted); margin-top: 4px; }
+    .pub .pub-ids {
+      font-size: 0.78rem; color: var(--muted); margin-top: 4px;
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .pub .pub-ids a { font-size: 0.78rem; color: var(--accent); text-decoration: none; }
+    .pub .pub-ids a:hover { text-decoration: underline; }
+
+    footer {
+      margin-top: 64px; font-size: 0.8rem; color: var(--muted);
+      border-top: 1px solid var(--border); padding-top: 20px;
+    }
+
+    @media (max-width: 500px) {
+      .header { flex-direction: column; align-items: flex-start; }
+      .item { flex-direction: column; gap: 4px; }
+      .item-year { min-width: unset; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ── HEADER ── -->
+  <div class="header">
+    <img src="photo.jpg" alt="Nazarii Shportun" />
+    <div class="header-text">
+      <h1>Nazarii Shportun</h1>
+      <p class="tagline">QA Automation Engineer &amp; Researcher &nbsp;·&nbsp; AI · LLMs · AWS &nbsp;·&nbsp; Canada</p>
+      <div class="links">
+        <a href="mailto:nazarii.shportun@kroll.com" title="Email">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://github.com/natebell510" title="GitHub" rel="noopener" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/nazariishportun/" title="LinkedIn" rel="noopener" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://orcid.org/0009-0002-7041-8990" title="ORCID" rel="noopener" target="_blank">
+          <i class="ai ai-orcid"></i> ORCID
+        </a>
+        <a href="https://scholar.google.com/citations?user=pJ98ZW0AAAAJ" title="Google Scholar" rel="noopener" target="_blank">
+          <i class="ai ai-google-scholar"></i> Scholar
+        </a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=60339715800" title="Scopus" rel="noopener" target="_blank">
+          <i class="ai ai-scopus"></i> Scopus
+        </a>
+        <a href="https://www.webofscience.com/wos/author/record/PMG-2578-2026" title="Web of Science" rel="noopener" target="_blank">
+          <i class="ai ai-web-of-science"></i> WoS
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BIO ── -->
+  <div class="bio">
+    <p>
+      I'm a QA Automation Engineer and researcher with expertise in AI-driven test systems,
+      large language models (LLMs), vector search, and cloud infrastructure on AWS.
+      Currently working as <strong>QE Engineer, Team Lead</strong> at
+      <a href="https://www.resolver.com" target="_blank" style="color:var(--accent);text-decoration:none;">Resolver Inc. (Kroll)</a>
+      in Toronto, Canada, where I lead software quality engineering and AI-assisted automation research.
+    </p>
+    <p>
+      I am a co-author of a Springer Nature book chapter on data-centric AI for psychological
+      support, indexed in Scopus and Web of Science. My research interests span intelligent
+      test automation, LLM integration in enterprise software, and cloud-native QA pipelines.
+      I hold two AWS certifications and am a member of the IEEE Foundation.
+    </p>
+  </div>
+
+  <!-- ── EXPERIENCE ── -->
+  <section>
+    <h2>Experience</h2>
+    <div class="item">
+      <span class="item-year">Jul 2022 – now</span>
+      <div class="item-body">
+        <strong>QE Engineer, Team Lead</strong>
+        <span class="org">
+          <a href="https://www.resolver.com" target="_blank" style="color:var(--muted);text-decoration:none;">Resolver Inc. (Kroll)</a>
+          &nbsp;·&nbsp; Toronto, Ontario, Canada
+        </span>
+        <p class="desc">
+          Department of Development / Software Quality Assurance. Leading QA automation
+          strategy and AI-assisted testing research. Funded internal research project on
+          AI-Assisted QA Automation (2025).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EDUCATION ── -->
+  <section>
+    <h2>Education</h2>
+    <div class="item">
+      <span class="item-year">2010 – 2013</span>
+      <div class="item-body">
+        <strong>Master's Degree, Accounting and Audit</strong>
+        <span class="org">
+          <a href="https://btnau.edu.ua/" target="_blank" rel="noopener" style="color:var(--muted);">Bila Tserkva National Agrarian University</a>
+          &nbsp;·&nbsp; Bila Tserkva, Ukraine
+        </span>
+        <p class="desc">Department of Economics and Finance</p>
+      </div>
+    </div>
+    <div class="item">
+      <span class="item-year">2007 – 2010</span>
+      <div class="item-body">
+        <strong>Specialist Degree</strong>
+        <span class="org">State University of Trade and Economics &nbsp;·&nbsp; Kyiv, Ukraine</span>
+        <p class="desc">
+          Vinnytsia College of Trade and Economics of Kyiv National University of Trade and Economics
+          &nbsp;·&nbsp; <a href="http://www.vtec.vn.ua" target="_blank" style="font-size:0.83rem;">vtec.vn.ua</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PUBLICATIONS ── -->
+  <section>
+    <h2>Publications</h2>
+    <div class="pub">
+      <a class="pub-title" href="https://doi.org/10.1007/978-3-032-10153-2_19" target="_blank">
+        Data-Centric Innovations for Psychological Support: Integrating LLMs and Vector Search in Professional Web Applications
+      </a>
+      <p class="pub-meta">
+        Nazarii Shportun et al. &nbsp;·&nbsp;
+        <em>Lecture Notes on Data Engineering and Communications Technologies</em>,
+        Springer Nature &nbsp;·&nbsp; 2026
+      </p>
+      <div class="pub-ids">
+        <a href="https://doi.org/10.1007/978-3-032-10153-2_19" target="_blank">
+          <i class="ai ai-doi"></i> DOI
+        </a>
+        <a href="https://www.scopus.com/inward/record.url?eid=2-s2.0-105027875162" target="_blank">
+          <i class="ai ai-scopus"></i> Scopus
+        </a>
+        <a href="https://scholar.google.com/citations?user=pJ98ZW0AAAAJ" target="_blank">
+          <i class="ai ai-google-scholar"></i> Google Scholar
+        </a>
+        <a href="https://www.webofscience.com/wos/author/record/PMG-2578-2026" target="_blank">
+          <i class="ai ai-web-of-science"></i> Web of Science
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICATIONS ── -->
+  <section>
+    <h2>Certifications &amp; Distinctions</h2>
+    <div class="badge-grid">
+      <a class="badge" href="https://www.credly.com/badges/94fcdfae-6b29-4bdf-8b8c-62c28b94e916" target="_blank">
+        <i class="fab fa-aws"></i> AWS Certified AI Practitioner <span style="font-weight:400;opacity:0.7;">(Feb 2026)</span>
+      </a>
+      <a class="badge" href="https://www.credly.com/badges/8f97a6c8-edce-407e-ab31-0b453b57ed1e" target="_blank">
+        <i class="fab fa-aws"></i> AWS Certified Cloud Practitioner <span style="font-weight:400;opacity:0.7;">(Oct 2025)</span>
+      </a>
+      <a class="badge" href="https://www.credly.com/badges/b53e9b16-2316-4a3e-9006-2a78d9f2cbf0" target="_blank">
+        <i class="fas fa-graduation-cap"></i> WES Verified International Qualifications <span style="font-weight:400;opacity:0.7;">(Nov 2020)</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── MEMBERSHIPS ── -->
+  <section>
+    <h2>Memberships</h2>
+    <div class="item">
+      <span class="item-year">2026 – 2037</span>
+      <div class="item-body">
+        <strong>Member</strong>
+        <span class="org">
+          <a href="https://www.ieee.org/" target="_blank" rel="noopener" style="color:var(--muted);">IEEE Foundation</a>
+          &nbsp;·&nbsp; Piscataway, NJ, USA
+        </span>
+      </div>
+    </div>
+    <div class="item">
+      <span class="item-year">2025 – 2026</span>
+      <div class="item-body">
+        <strong>Invited Contributing Author</strong>
+        <span class="org">Springer Nature, Berlin, Germany</span>
+        <p class="desc">
+          Chapter contribution to Lecture Notes on Data Engineering and Communications Technologies.
+          <a href="https://link.springer.com/chapter/10.1007/978-3-032-10153-2_19" target="_blank" style="font-size:0.83rem;">springer.com ↗</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INTERESTS ── -->
+  <section>
+    <h2>Interests</h2>
+
+    <div class="item">
+      <span class="item-year">Oct 2019</span>
+      <div class="item-body">
+        <strong>
+          <i class="fas fa-person-running" style="color:var(--accent);margin-right:4px;"></i>
+          <a href="https://chicago-history.r.mikatiming.com/2024/?content=detail&fpid=search&pid=search&idp=999999107FA312000023461A&lang=EN&event=MAR_999999107FA31100000000C9&lang=EN_CAP&search%5Bname%5D=shportun&search%5Bfirstname%5D=nazarii&search%5Bstart_no%5D=54051&search_event=ALL_EVENT_GROUP_2019#" target="_blank" rel="noopener">
+            Bank of America Chicago Marathon 2019
+          </a>
+        </strong>
+        <span class="org">Bib #54051 &nbsp;·&nbsp; Division: Men 25–29 &nbsp;·&nbsp; Harwood Heights, IL</span>
+        <p class="desc">
+          Finish time: <strong>4:46:07</strong> &nbsp;·&nbsp;
+          Overall: 29,539 &nbsp;·&nbsp;
+          Gender: 17,968 &nbsp;·&nbsp;
+          Age group: 2,045
+        </p>
+        <button class="splits-toggle" onclick="this.nextElementSibling.classList.toggle('open'); this.innerHTML = this.nextElementSibling.classList.contains('open') ? '&#9650; Hide splits' : '&#9660; Show splits';">
+          &#9660; Show splits
+        </button>
+        <table class="splits-table">
+          <tr><th>Split</th><th>Time</th><th>Pace (min/mi)</th></tr>
+          <tr><td>5K</td><td>0:28:50</td><td>9:17</td></tr>
+          <tr><td>10K</td><td>0:58:12</td><td>9:27</td></tr>
+          <tr><td>15K</td><td>1:25:48</td><td>8:54</td></tr>
+          <tr><td>20K</td><td>1:55:37</td><td>9:36</td></tr>
+          <tr><td>Half</td><td>2:02:24</td><td>9:59</td></tr>
+          <tr><td>25K</td><td>2:27:18</td><td>10:16</td></tr>
+          <tr><td>30K</td><td>3:02:56</td><td>11:28</td></tr>
+          <tr><td>35K</td><td>3:41:12</td><td>12:19</td></tr>
+          <tr><td>40K</td><td>4:21:55</td><td>13:07</td></tr>
+          <tr><td>Finish</td><td>4:46:07</td><td>—</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="item">
+      <span class="item-year">Feb 2020</span>
+      <div class="item-body">
+        <strong>
+          <i class="fas fa-stairs" style="color:var(--accent);margin-right:4px;"></i>
+          <a href="https://resphealth.org/wp-content/uploads/2020/03/94Overall.txt" target="_blank" rel="noopener">
+            Hustle Chicago – 94-Floor Stair Climb
+          </a>
+        </strong>
+        <span class="org">Respiratory Health Association &nbsp;·&nbsp; Chicago, IL</span>
+        <p class="desc">
+          Finish time: <strong>16:32</strong> &nbsp;·&nbsp;
+          Place overall: 175 &nbsp;·&nbsp;
+          Place men: 143 / 1,354 &nbsp;·&nbsp;
+          Team: CrossFit Park Ridge
+        </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <span class="item-year">CrossFit</span>
+      <div class="item-body">
+        <strong>
+          <i class="fas fa-dumbbell" style="color:var(--accent);margin-right:4px;"></i>
+          <a href="https://games.crossfit.com/athlete/938985" target="_blank" rel="noopener">
+            CrossFit Games Profile
+          </a>
+        </strong>
+        <span class="org">Athlete #938985 &nbsp;·&nbsp; CrossFit Open participant</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <span class="item-year">YouTube</span>
+      <div class="item-body">
+        <strong>
+          <i class="fab fa-youtube" style="color:#ff0000;margin-right:4px;"></i>
+          <a href="https://www.youtube.com/@nazarshp" target="_blank" rel="noopener">
+            @nazarshp
+          </a>
+        </strong>
+        <span class="org">YouTube Channel</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>
+      Last updated March 2026 &nbsp;·&nbsp; Built with plain HTML/CSS &nbsp;·&nbsp; Hosted on GitHub Pages
+      &nbsp;·&nbsp;
+      <a href="https://orcid.org/0009-0002-7041-8990" target="_blank" style="color:var(--accent);">
+        <i class="ai ai-orcid"></i> ORCID
+      </a>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
