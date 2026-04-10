@@ -194,16 +194,6 @@
     }
     .splits-table th { font-weight: 600; color: var(--text); }
     .splits-table.open { display: table; }
-
-    .badge-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-
-    .badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--badge-bg); color: var(--badge-text);
-      font-size: 0.82rem; font-weight: 500; padding: 5px 10px;
-      border-radius: 4px; text-decoration: none; transition: opacity 0.15s;
-    }
-    .badge:hover { opacity: 0.8; }
     .badge i { font-size: 0.9rem; }
 
     .pub { margin-bottom: 20px; }
@@ -312,7 +302,7 @@
       <div class="item-body">
         <strong>Master's Degree, Accounting and Audit</strong>
         <span class="org">
-          <a href="https://btnau.edu.ua/" target="_blank" rel="noopener" style="color:var(--muted);">Bila Tserkva National Agrarian University</a>
+          <a href="https://btnau.edu.ua/" style="color:var(--accent);" target="_blank" rel="noopener" style="color:var(--muted);">Bila Tserkva National Agrarian University</a>
           &nbsp;·&nbsp; Bila Tserkva, Ukraine
         </span>
         <p class="desc">Department of Economics and Finance</p>
@@ -334,7 +324,9 @@
   <!-- ── PUBLICATIONS ── -->
   <section>
     <h2>Publications</h2>
-    <div class="pub">
+    <div class="item">
+      <span class="item-year">Jan 16, 2026</span>
+      <div class="pub">
       <a class="pub-title" href="https://doi.org/10.1007/978-3-032-10153-2_19" target="_blank">
         Data-Centric Innovations for Psychological Support: Integrating LLMs and Vector Search in Professional Web Applications
       </a>
@@ -360,20 +352,87 @@
     </div>
   </section>
 
+
+  <!-- ── PEER REVIEWS ── -->
+  <section>
+    <h2>Peer Reviews</h2>
+
+    <div class="item">
+      <span class="item-year">Apr 5, 2026</span>
+      <div class="item-body">
+        <strong>
+          <i class="fas fa-check-circle" style="color:var(--accent);margin-right:4px;"></i>
+          Development Of A Procedure For Comparison Of Methods For Selecting The Optimal Architectural Variation Of Command Query Responsibility Segregation With Event Sourcing
+        </strong>
+        <span class="org">Eastern-European Journal of Enterprise Technologies &nbsp;·&nbsp; ISSN: 1729-4061</span>
+        <p class="desc">
+          Verified peer review &nbsp;·&nbsp;
+          <a href="https://www.webofscience.com/wos/op/peer-reviews/summary" target="_blank" rel="noopener">
+            <i class="ai ai-web-of-science"></i> WoS Record ↗
+          </a>
+          &nbsp;·&nbsp;
+          <a href="https://publons.com/wos-op/review/author/qeG7eZVF/" target="_blank" rel="noopener">
+            <i class="ai ai-publons"></i> Publons ↗
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <span class="item-year">Mar 23, 2026</span>
+      <div class="item-body">
+        <strong>
+          <i class="fas fa-check-circle" style="color:var(--accent);margin-right:4px;"></i>
+          Development of a Method for Optimizing the Internal Structure of Websites Based on the Analysis of the Similarity of DOM Structures
+        </strong>
+        <span class="org">Eastern-European Journal of Enterprise Technologies &nbsp;·&nbsp; ISSN: 1729-4061</span>
+        <p class="desc">
+          Verified peer review &nbsp;·&nbsp;
+          <a href="https://www.webofscience.com/wos/op/peer-reviews/summary" target="_blank" rel="noopener">
+            <i class="ai ai-web-of-science"></i> WoS Record ↗
+          </a>
+        </p>
+      </div>
+    </div>
+
+  </section>
+
   <!-- ── CERTIFICATIONS ── -->
   <section>
     <h2>Certifications &amp; Distinctions</h2>
-    <div class="badge-grid">
-      <a class="badge" href="https://www.credly.com/badges/94fcdfae-6b29-4bdf-8b8c-62c28b94e916" target="_blank">
-        <i class="fab fa-aws"></i> AWS Certified AI Practitioner <span style="font-weight:400;opacity:0.7;">(Feb 2026)</span>
-      </a>
-      <a class="badge" href="https://www.credly.com/badges/8f97a6c8-edce-407e-ab31-0b453b57ed1e" target="_blank">
-        <i class="fab fa-aws"></i> AWS Certified Cloud Practitioner <span style="font-weight:400;opacity:0.7;">(Oct 2025)</span>
-      </a>
-      <a class="badge" href="https://www.credly.com/badges/b53e9b16-2316-4a3e-9006-2a78d9f2cbf0" target="_blank">
-        <i class="fas fa-graduation-cap"></i> WES Verified International Qualifications <span style="font-weight:400;opacity:0.7;">(Nov 2020)</span>
-      </a>
+
+    <div class="item">
+      <span class="item-year">Feb 2026</span>
+      <div class="item-body">
+        <strong><a href="https://www.credly.com/badges/94fcdfae-6b29-4bdf-8b8c-62c28b94e916" target="_blank"><i class="fab fa-aws"></i> AWS Certified AI Practitioner</a></strong>
+        <span class="org">Amazon Web Services &nbsp;·&nbsp; Credly</span>
+      </div>
     </div>
+
+    <div class="item">
+      <span class="item-year">Oct 2025</span>
+      <div class="item-body">
+        <strong><a href="https://www.credly.com/badges/8f97a6c8-edce-407e-ab31-0b453b57ed1e" target="_blank"><i class="fab fa-aws"></i> AWS Certified Cloud Practitioner</a></strong>
+        <span class="org">Amazon Web Services &nbsp;·&nbsp; Credly</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <span class="item-year">Nov 2020</span>
+      <div class="item-body">
+        <strong><a href="https://www.credly.com/badges/b53e9b16-2316-4a3e-9006-2a78d9f2cbf0" target="_blank"><i class="fas fa-certificate"></i> WES Verified International Qualifications</a></strong>
+        <span class="org">World Education Services &nbsp;·&nbsp; Credly</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <span class="item-year">Jun 2019</span>
+      <div class="item-body">
+        <strong><a href="https://certificates.crossfit.com/9048d19b-062c-46f3-beb0-be5e538138bb#acc.u0fdoMGT" target="_blank"><i class="fas fa-dumbbell"></i> CrossFit Level 1 Trainer</a></strong>
+        <span class="org">CrossFit, Inc. &nbsp;·&nbsp; Issued Jun 16, 2019 &nbsp;·&nbsp; Expired Jun 16, 2024</span>
+      </div>
+    </div>
+
   </section>
 
   <!-- ── MEMBERSHIPS ── -->
@@ -384,7 +443,7 @@
       <div class="item-body">
         <strong>Member</strong>
         <span class="org">
-          <a href="https://www.ieee.org/" target="_blank" rel="noopener" style="color:var(--muted);">IEEE Foundation</a>
+          <a href="https://www.ieee.org/" style="color:var(--accent);" target="_blank" rel="noopener" style="color:var(--muted);">IEEE Foundation</a>
           &nbsp;·&nbsp; Piscataway, NJ, USA
         </span>
       </div>
@@ -415,10 +474,7 @@
             Bank of America Chicago Marathon 2019
           </a>
         </strong>
-        <span class="org">Bib #54051 &nbsp;·&nbsp; Division: Men 25–29</span>
-        <p class="desc">
-          Finish time: <strong>4:46:07</strong> &nbsp;·&nbsp;
-        </p>
+        <span class="org">Bib #54051 &nbsp;·&nbsp; Division: Men 25–29 &nbsp;·&nbsp; Finish time: 4:46:07</span>
       </div>
     </div>
 
@@ -433,7 +489,7 @@
         </strong>
         <span class="org">Respiratory Health Association &nbsp;·&nbsp; Chicago, IL</span>
         <p class="desc">
-          Finish time: <strong>16:32</strong> &nbsp;·&nbsp;
+          Finish time: 16:32 &nbsp;·&nbsp;
           Place overall: 175 &nbsp;·&nbsp;
           Place men: 143 / 1,354 &nbsp;·&nbsp;
           Team: CrossFit Park Ridge
@@ -459,7 +515,7 @@
   <!-- ── FOOTER ── -->
   <footer>
     <p>
-      Last updated March 2026 &nbsp;·&nbsp; Built with plain HTML/CSS &nbsp;·&nbsp; Hosted on GitHub Pages
+      Last updated April 2026 &nbsp;·&nbsp; Built with plain HTML/CSS &nbsp;·&nbsp; Hosted on GitHub Pages
       &nbsp;·&nbsp;
       <a href="https://orcid.org/0009-0002-7041-8990" target="_blank" style="color:var(--accent);">
         <i class="ai ai-orcid"></i> ORCID
