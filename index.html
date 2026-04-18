@@ -17,9 +17,12 @@
 
   <!-- ── SEO: Canonical & Indexing ── -->
   <link rel="canonical" href="https://nazariishportun.com/" />
+  <link rel="alternate" hreflang="en" href="https://nazariishportun.com/" />
+  <link rel="alternate" hreflang="uk" href="https://nazariishportun.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://nazariishportun.com/" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Nazarii Shportun" />
-  <meta name="keywords" content="Nazarii Shportun, Nazar Shportun, QA Automation Engineer, QE, AI Testing, LLM, Vector Search, AWS, Resolver, Kroll, Springer Nature, IEEE, CrossFit, Chicago Marathon, Canada, Ukraine, USA" />
+  <meta name="keywords" content="Nazarii Shportun, Nazar Shportun, Назарій Шпортун, Назар Шпортун, QA Automation Engineer, QE, AI Testing, LLM, Vector Search, AWS, Resolver, Kroll, Springer Nature, IEEE, CrossFit, Chicago Marathon, Canada, Ukraine, USA" />
 
   <!-- ── Open Graph (Facebook, LinkedIn previews) ── -->
   <meta property="og:type" content="profile" />
@@ -31,6 +34,7 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="uk_UA" />
   <meta property="og:site_name" content="Nazarii Shportun" />
   <meta property="profile:first_name" content="Nazarii" />
   <meta property="profile:last_name" content="Shportun" />
@@ -48,7 +52,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Nazarii Shportun",
-    "alternateName": "Nazar Shportun",
+    "alternateName": ["Nazar Shportun", "Назарій Шпортун", "Назар Шпортун"],
     "url": "https://nazariishportun.com/",
     "image": "https://nazariishportun.com/photo.png",
     "email": "nazarii.shportun@kroll.com",
@@ -90,6 +94,11 @@
       "Software Quality Engineering",
       "Playwright Typescript"
     ],
+    "knowsLanguage": ["en", "uk"],
+    "nationality": {
+      "@type": "Country",
+      "name": "Ukraine"
+    },
     "hasCredential": [
       {
         "@type": "EducationalOccupationalCredential",
@@ -220,6 +229,17 @@
       .header { flex-direction: column; align-items: flex-start; }
       .item { flex-direction: column; gap: 4px; }
       .item-year { min-width: unset; }
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
   </style>
 </head>
