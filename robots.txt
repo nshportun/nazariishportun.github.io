@@ -1,4 +1,22 @@
+# All crawlers
 User-agent: *
 Allow: /
 
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# Sitemap
 Sitemap: https://nazariishportun.com/sitemap.xml
