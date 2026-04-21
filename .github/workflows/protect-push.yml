@@ -6,7 +6,7 @@ on:
 jobs:
   check-author:
     runs-on: ubuntu-latest
-    if: github.actor != 'nazariishportun'
+    if: github.actor != 'natebell510'
     steps:
       - uses: actions/checkout@v4
         with:
