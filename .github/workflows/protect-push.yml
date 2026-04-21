@@ -1,0 +1,19 @@
+name: Protect Push
+
+on:
+  push:
+
+jobs:
+  check-author:
+    runs-on: ubuntu-latest
+    if: github.actor != 'nazariishportun'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Revert unauthorized push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git revert --no-edit HEAD
+          git push
