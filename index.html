@@ -22,7 +22,7 @@
   <link rel="alternate" hreflang="x-default" href="https://nazariishportun.com/" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Nazarii Shportun" />
-  <meta name="keywords" content="Nazarii Shportun, Nazar Shportun, Назарій Шпортун, Назар Шпортун, QA Automation Engineer, QE, AI Testing, LLM, Vector Search, AWS, Resolver, Kroll, Springer Nature, IEEE, CrossFit, Chicago Marathon, Canada, Ukraine, USA" />
+  <meta name="keywords" content="Nazarii Shportun, Nazar Shportun, Назарій Шпортун, Назар Шпортун, QA Automation Engineer, QE, AI Testing, LLM, Vector Search, AWS, Resolver, Kroll, Springer Nature, IEEE, CrossFit, Chicago Marathon, Canada, Ukraine, USA, immigration law, fine-tuning, Llama, HuggingFace, SageMaker" />
 
   <!-- ── Open Graph (Facebook, LinkedIn previews) ── -->
   <meta property="og:type" content="profile" />
@@ -92,7 +92,9 @@
       "Amazon Web Services",
       "Cloud Infrastructure",
       "Software Quality Engineering",
-      "Playwright Typescript"
+      "Playwright Typescript",
+      "LLM Fine-tuning",
+      "Immigration Law AI"
     ],
     "knowsLanguage": ["en", "uk"],
     "nationality": {
@@ -220,6 +222,15 @@
     .pub .pub-ids a { font-size: 0.78rem; color: var(--accent); text-decoration: none; }
     .pub .pub-ids a:hover { text-decoration: underline; }
 
+    .project-tags {
+      display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px;
+    }
+    .project-tag {
+      font-size: 0.73rem; color: var(--badge-text); background: var(--badge-bg);
+      border: 1px solid #c8dff8; border-radius: 3px; padding: 1px 6px;
+      white-space: nowrap;
+    }
+
     footer {
       margin-top: 64px; font-size: 0.8rem; color: var(--muted);
       border-top: 1px solid var(--border); padding-top: 20px;
@@ -318,6 +329,95 @@
   <!-- ── PROJECTS ── -->
   <section>
     <h2>Projects</h2>
+
+    <!-- NEW: USA Immigration Law Pipeline -->
+    <div class="item">
+      <span class="item-year">May 2026</span>
+      <div class="item-body">
+        <strong>USA Immigration Law — Dataset &amp; Fine-Tuned LLM</strong>
+        <span class="org">
+          End-to-end pipeline: crawl → parse → QA generation (Bedrock) → LoRA fine-tuning (SageMaker)
+        </span>
+        <p class="desc">
+          Built a fully reproducible pipeline that scrapes official U.S. immigration sources (USCIS, 8 CFR, BIA) and generates a <strong>17,058-question Q&amp;A dataset</strong> using AWS Bedrock Claude. Fine-tuned Llama 3.2 3B via SageMaker JumpStart with LoRA (r=32), producing a model that <strong>outperforms the Llama 3 8B zero-shot baseline</strong> by +27% mean score and delivers 4× more fully-correct answers — at one-third the parameter count.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">AWS Bedrock</span>
+          <span class="project-tag">SageMaker</span>
+          <span class="project-tag">LoRA Fine-tuning</span>
+          <span class="project-tag">Llama 3.2 3B</span>
+          <span class="project-tag">Legal AI</span>
+          <span class="project-tag">Python</span>
+        </div>
+        <p class="desc" style="margin-top:8px;">
+          <a href="https://github.com/natebell510/usa-immigration" target="_blank" rel="noopener">GitHub</a>
+          &nbsp;·&nbsp;
+          <a href="https://huggingface.co/datasets/nshportun/usa-immigration-law-qa" target="_blank" rel="noopener">
+            <i class="fas fa-database" style="font-size:0.8rem;"></i> Dataset on HuggingFace
+          </a>
+          &nbsp;·&nbsp;
+          <a href="https://huggingface.co/nshportun/usa-immigration-llama-3.2-3b-v3" target="_blank" rel="noopener">
+            <i class="fas fa-robot" style="font-size:0.8rem;"></i> Model on HuggingFace
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- NEW: Dataset -->
+    <div class="item">
+      <span class="item-year">May 2026</span>
+      <div class="item-body">
+        <strong>nshportun/usa-immigration-law-qa</strong>
+        <span class="org">
+          HuggingFace Dataset &nbsp;·&nbsp; 17,058 source-grounded Q&amp;A pairs &nbsp;·&nbsp; CC BY 4.0
+        </span>
+        <p class="desc">
+          Large-scale Q&amp;A dataset covering U.S. immigration law across 13 subdomains (family-based, naturalization, asylum, removal, and more), built entirely from official government sources. Each record carries <code>source_url</code>, <code>source_span</code>, and <code>authority_level</code> for citation-aware RAG and fine-tuning. Includes 10,056 canonical source documents in the <code>corpus</code> config.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Question Answering</span>
+          <span class="project-tag">RAG</span>
+          <span class="project-tag">Legal NLP</span>
+          <span class="project-tag">USCIS</span>
+          <span class="project-tag">8 CFR</span>
+          <span class="project-tag">BIA</span>
+        </div>
+        <p class="desc" style="margin-top:8px;">
+          <a href="https://huggingface.co/datasets/nshportun/usa-immigration-law-qa" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt" style="font-size:0.8rem;"></i> View on HuggingFace
+          </a>
+          &nbsp;·&nbsp; DOI: 10.57967/hf/8824
+        </p>
+      </div>
+    </div>
+
+    <!-- NEW: Fine-tuned model -->
+    <div class="item">
+      <span class="item-year">May 2026</span>
+      <div class="item-body">
+        <strong>nshportun/usa-immigration-llama-3.2-3b-v3</strong>
+        <span class="org">
+          HuggingFace Model &nbsp;·&nbsp; Llama 3.2 3B · LoRA merged · BF16 · 6.4 GB
+        </span>
+        <p class="desc">
+          Llama 3.2 3B Instruct fine-tuned with LoRA (r=32, all attention projections) on 16,065 immigration law Q&amp;A pairs via AWS SageMaker JumpStart. LoRA weights are merged into the base model — load with standard <code>AutoModelForCausalLM</code>, no adapter setup required. Evaluated with Claude Sonnet 4.6 as LLM-as-Judge on 101 held-out questions.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">Text Generation</span>
+          <span class="project-tag">Transformers</span>
+          <span class="project-tag">Safetensors</span>
+          <span class="project-tag">LoRA</span>
+          <span class="project-tag">Immigration Law</span>
+        </div>
+        <p class="desc" style="margin-top:8px;">
+          <a href="https://huggingface.co/nshportun/usa-immigration-llama-3.2-3b-v3" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt" style="font-size:0.8rem;"></i> View on HuggingFace
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- EXISTING projects -->
     <div class="item">
       <span class="item-year">Open project</span>
       <div class="item-body">
@@ -398,7 +498,7 @@
   <section>
     <h2>Publications</h2>
     <div class="item">
-      <span class="item-year">Jan 16, 2026</span>
+      <span class="item-year">Jan 16, 2026</span>
       <div class="pub">
       <a class="pub-title" href="https://doi.org/10.1007/978-3-032-10153-2_19" target="_blank">
         Data-Centric Innovations for Psychological Support: Integrating LLMs and Vector Search in Professional Web Applications
@@ -569,7 +669,7 @@
   <!-- ── FOOTER ── -->
   <footer>
     <p>
-      Last updated April 2026 &nbsp;·&nbsp; Built with plain HTML/CSS &nbsp;·&nbsp; Hosted on GitHub Pages
+      Last updated May 2026 &nbsp;·&nbsp; Built with plain HTML/CSS &nbsp;·&nbsp; Hosted on GitHub Pages
       &nbsp;·&nbsp;
       <a href="https://orcid.org/0009-0002-7041-8990" target="_blank" style="color:var(--accent);">
         <i class="ai ai-orcid"></i> ORCID
