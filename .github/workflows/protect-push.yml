@@ -6,14 +6,17 @@ on:
 jobs:
   check-author:
     runs-on: ubuntu-latest
-    if: github.actor != 'nshportun'
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Revert unauthorized push
+      - name: Check if push is from authorized author
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git revert --no-edit HEAD
-          git push
+          if [ "${{ github.actor }}" != "nshportun" ]; then
+            echo "Unauthorized push detected from ${{ github.actor }}"
+            echo "::error::Unauthorized push detected from ${{ github.actor }}"
+            exit 1
+          else
+            echo "Authorized push from ${{ github.actor }}"
+            echo "Push is authorized. No action needed."
+          fi
