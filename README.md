@@ -11,8 +11,6 @@ I’m a QA Engineer and researcher focused on **AI-driven test systems, LLMs, ve
 ### [BestTester](https://github.com/nshportun/BestTester)
 **Production-grade Playwright + TypeScript QA framework with AI-powered testing and LLM-as-Judge evaluation.**
 ### [USA Immigration Law — Dataset & Fine-Tuned LLM](https://github.com/nshportun/usa-immigration)
-### [U.S. Immigration Law Q&A Chatbot](https://huggingface.co/spaces/your-space-link)
-**Dataset-driven RAG chatbot deployed as a Hugging Face Space.**
 
 ## Publications
 - **[ImmigrationQA: A Source-Grounded Dataset and Small-Model Adaptation for U.S. Immigration Law](https://arxiv.org/abs/your-arxiv-id)** — *arXiv*, 2026. [18]
